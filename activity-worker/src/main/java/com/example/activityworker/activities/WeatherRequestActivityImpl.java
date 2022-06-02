@@ -1,7 +1,7 @@
 package com.example.activityworker.activities;
 
-import com.example.activityworker.activities.model.WeatherInfo;
-import com.example.activityworker.activities.repo.WeatherInfoRepo;
+import com.example.activityworker.model.WeatherInfo;
+import com.example.activityworker.repo.WeatherInfoRepo;
 import com.example.activityworker.service.WeatherRequestService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;

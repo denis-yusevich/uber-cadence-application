@@ -1,7 +1,6 @@
 package com.example.activityworker.activities;
 
-import com.example.activityworker.activities.model.WeatherInfo;
-import com.fasterxml.jackson.core.JsonProcessingException;
+import com.example.activityworker.model.WeatherInfo;
 
 
 public interface WeatherRequestActivity {

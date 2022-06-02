@@ -27,9 +27,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
+            <groupId>com.uber.cadence</groupId>
+            <artifactId>cadence-client</artifactId>
+            <version>3.6.1</version>
         </dependency>
 
         <dependency>
@@ -45,7 +45,7 @@
         <module>activity-worker</module>
         <module>workflow-worker</module>
         <module>workflow-launcher</module>
-        <module>activities</module>
+        <module>workflow-client-factory</module>
     </modules>
 
 

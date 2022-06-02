@@ -1,4 +1,4 @@
-package com.example.activityworker.activities.dto;
+package com.example.activityworker.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

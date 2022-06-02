@@ -1,6 +1,6 @@
-package com.example.workflowworker;
+package com.example.workflowworker.workflow;
 
-import com.example.activityworker.activities.model.WeatherInfo;
+import com.example.activityworker.model.WeatherInfo;
 import com.uber.cadence.workflow.WorkflowMethod;
 
 public interface WeatherWorkflow {

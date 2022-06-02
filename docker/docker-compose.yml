@@ -63,18 +63,17 @@ services:
     ports:
       - '5432:5432'
 
-
   activity-worker:
-    build: ./activity-worker
+    build: ../activity-worker
     ports:
       - '8888:8888'
 
   workflow-worker:
-    build: ./workflow-worker
+    build: ../workflow-worker
     ports:
       - '8880:8880'
 
   workflow-launcher:
-    build: ./workflow-launcher
+    build: ../workflow-launcher
     ports:
       - '8080:8080'

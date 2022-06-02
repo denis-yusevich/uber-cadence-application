@@ -1,4 +1,4 @@
-package com.example.activityworker.activities.model;
+package com.example.activityworker.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
