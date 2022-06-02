@@ -6,5 +6,5 @@
 
 3.bash start.sh
 
-After that you can send the following request in browser:
-localhost:8080/weather?city={city_name}
+After that you can send the following request in postman:
+POST localhost:8080/weather?city={city_name}
