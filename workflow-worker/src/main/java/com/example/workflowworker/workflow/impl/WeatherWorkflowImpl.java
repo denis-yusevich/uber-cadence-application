@@ -16,7 +16,6 @@ public class WeatherWorkflowImpl implements WeatherWorkflow {
         this.activity = Workflow.newActivityStub(WeatherRequestActivity.class,
                 new ActivityOptions.Builder()
                         .setScheduleToStartTimeout(Duration.ofSeconds(30))
-                        .setScheduleToStartTimeout(Duration.ofSeconds(30))
                         .setStartToCloseTimeout(Duration.ofSeconds(30))
                         .build());
     }
