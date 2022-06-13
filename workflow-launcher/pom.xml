@@ -27,14 +27,13 @@
 
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>workflow-worker</artifactId>
+            <artifactId>workflow</artifactId>
             <version>${project.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-data-jpa</artifactId>
-                </exclusion>
-            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>workflow-client-factory</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

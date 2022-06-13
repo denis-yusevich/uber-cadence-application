@@ -1,7 +1,7 @@
 package com.example.activityworker.service;
 
-import com.example.activityworker.model.WeatherInfo;
+import com.example.model.WeatherInfoResponseDto;
 
 public interface WeatherRequestService {
-    WeatherInfo requestWeatherInfo(String cityName);
+    WeatherInfoResponseDto requestWeatherInfo(String cityName);
 }

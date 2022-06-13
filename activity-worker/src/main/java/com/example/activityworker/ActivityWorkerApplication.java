@@ -2,12 +2,16 @@ package com.example.activityworker;
 
 import com.example.activityworker.service.WorkerFactoryService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@AllArgsConstructor
+@EntityScan(basePackages = "com.example.model")
+@RequiredArgsConstructor
 public class ActivityWorkerApplication implements CommandLineRunner {
 
     private final WorkerFactoryService workerFactoryService;

@@ -1,8 +1,10 @@
 package com.example.workflowworker.workflow.impl;
 
-import com.example.activityworker.activities.WeatherRequestActivity;
-import com.example.activityworker.model.WeatherInfo;
-import com.example.workflowworker.workflow.WeatherWorkflow;
+
+import com.example.activity.activities.WeatherRequestActivity;
+import com.example.model.WeatherInfo;
+import com.example.model.WeatherInfoResponseDto;
+import com.example.workflow.WeatherWorkflow;
 import com.uber.cadence.activity.ActivityOptions;
 import com.uber.cadence.workflow.Workflow;
 
@@ -22,7 +24,7 @@ public class WeatherWorkflowImpl implements WeatherWorkflow {
 
     @Override
     public WeatherInfo downloadWeatherInfo(String city) {
-        WeatherInfo weatherInfo = activity.getWeatherInfo(city);
+        WeatherInfoResponseDto weatherInfo = activity.getWeatherInfo(city);
         return activity.storeWeatherInfo(weatherInfo);
     }
 }

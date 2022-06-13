@@ -11,7 +11,8 @@ public class WorkflowWorkerApplication {
     private static final String TASK_LIST = "task-list";
 
     public static void main(String[] args) {
-        WorkflowClient workflowClient = WorkflowClientFactory.createNewWorkflowClient();
+        WorkflowClient workflowClient = WorkflowClientFactory.createNewWorkflowClient(
+                WorkflowClientFactory.workflowServiceTChannel());
 
         WorkerFactory factory = WorkerFactory.newInstance(workflowClient);
         Worker worker = factory.newWorker(TASK_LIST);

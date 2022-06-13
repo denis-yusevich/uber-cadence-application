@@ -27,6 +27,11 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.uber.cadence</groupId>
             <artifactId>cadence-client</artifactId>
             <version>3.6.1</version>
@@ -46,6 +51,9 @@
         <module>workflow-worker</module>
         <module>workflow-launcher</module>
         <module>workflow-client-factory</module>
+        <module>activities</module>
+        <module>model</module>
+        <module>workflow</module>
     </modules>
 
 

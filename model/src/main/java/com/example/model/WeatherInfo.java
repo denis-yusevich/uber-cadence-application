@@ -1,4 +1,4 @@
-package com.example.activityworker.model;
+package com.example.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,9 +28,9 @@ public class WeatherInfo {
     @Column(name = "date_time")
     private LocalDateTime dateTime;
 
-    public WeatherInfo(String city, Double temp) {
-        this.city = city;
-        this.temp = temp;
+    public WeatherInfo(WeatherInfoResponseDto dto) {
+        this.city = dto.getCity();
+        this.temp = dto.getTemp();
     }
 
     @PrePersist

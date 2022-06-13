@@ -1,6 +1,6 @@
 package com.example.activityworker.repo;
 
-import com.example.activityworker.model.WeatherInfo;
+import com.example.model.WeatherInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

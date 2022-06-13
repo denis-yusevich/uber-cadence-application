@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class WeatherInfoDto {
-    String cityName;
-    double temp;
+    private String cityName;
+    private double temp;
 
     @Override
     public String toString() {

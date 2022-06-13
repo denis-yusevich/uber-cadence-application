@@ -1,8 +1,11 @@
 package com.example.activityworker.activities;
 
-import com.example.activityworker.model.WeatherInfo;
+
+import com.example.activity.activities.WeatherRequestActivity;
 import com.example.activityworker.repo.WeatherInfoRepo;
 import com.example.activityworker.service.WeatherRequestService;
+import com.example.model.WeatherInfo;
+import com.example.model.WeatherInfoResponseDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -14,12 +17,12 @@ public class WeatherRequestActivityImpl implements WeatherRequestActivity {
     private final WeatherRequestService weatherRequestService;
 
     @Override
-    public WeatherInfo getWeatherInfo(String cityName) {
+    public WeatherInfoResponseDto getWeatherInfo(String cityName) {
        return weatherRequestService.requestWeatherInfo(cityName);
     }
 
     @Override
-    public WeatherInfo storeWeatherInfo(WeatherInfo weatherInfo) {
-        return weatherInfoRepo.save(weatherInfo);
+    public WeatherInfo storeWeatherInfo(WeatherInfoResponseDto responseDto) {
+        return weatherInfoRepo.save(new WeatherInfo(responseDto));
     }
 }

@@ -1,30 +1,27 @@
 package com.example.workflowlauncher.controller;
 
-import com.example.workflowlauncher.service.WorkflowLauncher;
-import com.uber.cadence.client.WorkflowException;
-import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
+import com.example.workflowlauncher.service.WeatherInfoService;
+import lombok.RequiredArgsConstructor;
+import org.apache.thrift.TException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@AllArgsConstructor
-public class WorkflowLaunchController {
+import java.util.concurrent.ExecutionException;
 
-    private final WorkflowLauncher workflowLauncher;
+@RestController
+@RequiredArgsConstructor
+public class WorkflowLaunchController {
+    private final WeatherInfoService service;
 
     @PostMapping(value = "/weather")
-    public String launchWeatherWorkflow(@RequestParam String city) {
-        return workflowLauncher.launchWorkflow(city).toString();
+    public String launchWeatherWorkflow(@RequestParam String city) throws TException {
+        return service.downloadWeatherInfo(city).toString();
     }
 
-    @ExceptionHandler(WorkflowException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handle(){
-        return "Weather info was not found!";
+    @PostMapping(value = "/rerun")
+    public String rerunWeatherWorkflow(@RequestParam String city)
+            throws TException, ExecutionException, InterruptedException {
+        return service.reDownloadWeatherInfo(city);
     }
 }
