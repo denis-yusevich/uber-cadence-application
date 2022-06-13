@@ -1,7 +1,6 @@
 package com.example.activityworker.service.impl;
 
 import com.example.activityworker.service.WeatherRequestService;
-import com.example.model.WeatherInfo;
 import com.example.model.WeatherInfoResponseDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
